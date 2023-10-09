@@ -12,7 +12,7 @@ import SwiftUI
 struct GridItem: Identifiable {
     let id = UUID()
     let height: CGFloat
-    let title: String
+    let imageString: String
 }
 
 struct PinterestGrid: View {
@@ -58,23 +58,23 @@ struct PinterestGrid: View {
     var body: some View {
         
         HStack(alignment: .top, spacing: spacing) {
-             
             ForEach(ccolumns) { column in
                 LazyVStack(spacing: spacing) {
                     ForEach(column.gridItems) { gridItem in
-                        
-                        Rectangle()
-                            .foregroundColor(.mint)
-                            .frame(height: gridItem.height)
-                            .overlay(
-                                Text(gridItem.title)
-                                    .font(.system(size: 20, weight: .bold, design: .rounded))
-                            )
+                        getItemView(gridItem: gridItem)
                     }
                 }
             }
         }
         .padding(.horizontal, horizontalPadding)
+    }
+    
+    func getItemView(gridItem: GridItem) -> some View {
+        ZStack {
+            
+        }
+        .frame(height: gridItem.height)
+        
     }
 }
 
