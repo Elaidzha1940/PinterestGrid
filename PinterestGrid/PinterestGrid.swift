@@ -9,8 +9,19 @@
 
 import SwiftUI
 
+struct GridItem: Identifiable {
+    let id = UUID()
+    let height: CGFloat
+}
+
 struct PinterestGrid: View {
+    struct Column: Identifiable {
+        let id = UUID()
+        var gridItems = [GridItem]()
+    }
+    
     let spacing: CGFloat = 5
+    let horizontalPadding: CGFloat = 10
     
     var body: some View {
         
@@ -32,6 +43,7 @@ struct PinterestGrid: View {
                 }
             }
         }
+        .padding(.horizontal, horizontalPadding)
     }
 }
 
