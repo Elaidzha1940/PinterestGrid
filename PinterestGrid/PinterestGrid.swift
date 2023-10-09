@@ -56,9 +56,17 @@ struct PinterestGrid: View {
             var smallestColumnIndex = 0
             var smallestHeight = columnsHeight.first!
             for i in 1 ..< columnsHeight.count  {
-                
+                let currentHeight = columnsHeight[i]
+                if currentHeight < smallestHeight {
+                    smallestHeight = currentHeight
+                    smallestColumnIndex =
+                }
             }
+            
+            ccolumns[smallestColumnIndex].gridItems.append(gridItem)
+            columnsHeight[smallestColumnIndex] += gridItem.height
         }
+        self.ccolumns = ccolumns
     }
     
     var body: some View {
