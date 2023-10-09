@@ -19,6 +19,11 @@ struct PinterestGrid: View {
         let id = UUID()
         var gridItems = [GridItem]()
     }
+    let columns = [
+        Column(gridItems: [
+        GridItem(height: 200)
+        ])
+    ]
     
     let spacing: CGFloat = 5
     let horizontalPadding: CGFloat = 10
