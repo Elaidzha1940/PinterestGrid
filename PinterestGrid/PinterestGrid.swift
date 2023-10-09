@@ -20,23 +20,9 @@ struct PinterestGrid: View {
         let id = UUID()
         var gridItems = [GridItem]()
     }
-    let columns = [
-        Column(gridItems: [
-            GridItem(height: 200, title: "1"),
-            GridItem(height: 170, title: "5"),
-            GridItem(height: 300, title: "8"),
-            GridItem(height: 150, title: "4"),
-        ]),
-        
-        Column(gridItems: [
-            GridItem(height: 100, title: "2"),
-            GridItem(height: 350, title: "7"),
-            GridItem(height: 150, title: "6"),
-            GridItem(height: 250, title: "3"),
-        ])
-    ]
+ 
     
-    let ccolumns: [GridItem]
+    let ccolumns: [Column ]
     
     let spacing: CGFloat
     let horizontalPadding: CGFloat
@@ -59,7 +45,7 @@ struct PinterestGrid: View {
                 let currentHeight = columnsHeight[i]
                 if currentHeight < smallestHeight {
                     smallestHeight = currentHeight
-                    smallestColumnIndex =
+                    smallestColumnIndex = i
                 }
             }
             
@@ -73,7 +59,7 @@ struct PinterestGrid: View {
         
         HStack(alignment: .top, spacing: spacing) {
              
-            ForEach(columns) { column in
+            ForEach(ccolumns) { column in
                 LazyVStack(spacing: spacing) {
                     ForEach(column.gridItems) { gridItem in
                         
