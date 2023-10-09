@@ -36,8 +36,30 @@ struct PinterestGrid: View {
         ])
     ]
     
-    let spacing: CGFloat = 5
-    let horizontalPadding: CGFloat = 10
+    let ccolumns: [GridItem]
+    
+    let spacing: CGFloat
+    let horizontalPadding: CGFloat
+    
+    init(gridItem: [GridItem], numberofColumns: Int, spacing: CGFloat = 20, horizontalPadding: CGFloat = 20) {
+        self.spacing = spacing
+        self.horizontalPadding = horizontalPadding
+        
+        var columns = [Column]()
+        for _ in 0 ..< numberofColumns {
+            ccolumns.append(Column())
+        }
+        
+        var columnsHeight = Array<CGFloat>(repeating: 0, count: numberofColumns)
+        
+        for gridItem in gridItem {
+            var smallestColumnIndex = 0
+            var smallestHeight = columnsHeight.first!
+            for i in 1 ..< columnsHeight.count  {
+                
+            }
+        }
+    }
     
     var body: some View {
         
