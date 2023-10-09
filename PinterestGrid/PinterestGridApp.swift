@@ -1,9 +1,11 @@
+//  /*
 //
-//  PinterestGridApp.swift
-//  PinterestGrid
+//  Project: PinterestGrid
+//  File: PinterestGridApp.swift
+//  Created by: Elaidzha Shchukin
+//  Date: 09.10.202
 //
-//  Created by Elaidzha Shchukin on 09.10.2023.
-//
+//  */
 
 import SwiftUI
 

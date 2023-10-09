@@ -11,6 +11,7 @@
 		E4BF60802AD460D700ED43F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BF607F2AD460D700ED43F8 /* ContentView.swift */; };
 		E4BF60822AD460D800ED43F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4BF60812AD460D800ED43F8 /* Assets.xcassets */; };
 		E4BF60852AD460D800ED43F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4BF60842AD460D800ED43F8 /* Preview Assets.xcassets */; };
+		E4BF608C2AD4B8D100ED43F8 /* PinterestGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BF608B2AD4B8D100ED43F8 /* PinterestGrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		E4BF607F2AD460D700ED43F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E4BF60812AD460D800ED43F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4BF60842AD460D800ED43F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E4BF608B2AD4B8D100ED43F8 /* PinterestGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				E4BF607F2AD460D700ED43F8 /* ContentView.swift */,
 				E4BF60812AD460D800ED43F8 /* Assets.xcassets */,
 				E4BF60832AD460D800ED43F8 /* Preview Content */,
+				E4BF608B2AD4B8D100ED43F8 /* PinterestGrid.swift */,
 			);
 			path = PinterestGrid;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4BF608C2AD4B8D100ED43F8 /* PinterestGrid.swift in Sources */,
 				E4BF60802AD460D700ED43F8 /* ContentView.swift in Sources */,
 				E4BF607E2AD460D700ED43F8 /* PinterestGridApp.swift in Sources */,
 			);

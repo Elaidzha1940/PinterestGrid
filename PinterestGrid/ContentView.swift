@@ -1,21 +1,21 @@
+//  /*
 //
-//  ContentView.swift
-//  PinterestGrid
+//  Project: PinterestGrid
+//  File: ContentView.swift
+//  Created by: Elaidzha Shchukin
+//  Date: 09.10.202
 //
-//  Created by Elaidzha Shchukin on 09.10.2023.
-//
+//  */
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        ScrollView {
+            PinterestGrid()
+            
         }
-        .padding()
     }
 }
 
