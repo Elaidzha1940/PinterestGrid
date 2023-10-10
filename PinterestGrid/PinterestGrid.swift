@@ -71,10 +71,13 @@ struct PinterestGrid: View {
     
     func getItemView(gridItem: GridItem) -> some View {
         ZStack {
-            
+            GeometryReader { _ in
+                Image(gridItem.imageString)
+                    .resizable()
+            }
         }
         .frame(height: gridItem.height)
-        
+        .frame(maxWidth: .infinity)
     }
 }
 
