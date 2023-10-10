@@ -70,7 +70,7 @@ struct PinterestGrid: View {
     }
     
     func getItemView(gridItem: GridItem) -> some View {
-        ZStack {
+        return ZStack {
             GeometryReader { reader in
                 Image(gridItem.imageString)
                     .resizable()
@@ -80,7 +80,7 @@ struct PinterestGrid: View {
         }
         .frame(height: gridItem.height)
         .frame(maxWidth: .infinity)
-        return clipShape(RoundedRectangle(cornerRadius: 15))
+        .clipShape(RoundedRectangle(cornerRadius: 15))
     }
 }
 
