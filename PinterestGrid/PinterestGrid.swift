@@ -22,7 +22,7 @@ struct PinterestGrid: View {
     }
  
     
-    let ccolumns: [Column ]
+    let columnss: [Column]
     
     let spacing: CGFloat
     let horizontalPadding: CGFloat
@@ -31,9 +31,9 @@ struct PinterestGrid: View {
         self.spacing = spacing
         self.horizontalPadding = horizontalPadding
         
-        var columns = [Column]()
+        var columnss = [Column]()
         for _ in 0 ..< numberofColumns {
-            ccolumns.append(Column())
+            columnss.append(Column())
         }
         
         var columnsHeight = Array<CGFloat>(repeating: 0, count: numberofColumns)
@@ -49,16 +49,16 @@ struct PinterestGrid: View {
                 }
             }
             
-            ccolumns[smallestColumnIndex].gridItems.append(gridItem)
+            columnss[smallestColumnIndex].gridItems.append(gridItem)
             columnsHeight[smallestColumnIndex] += gridItem.height
         }
-        self.ccolumns = ccolumns
+        self.columnss = columnss
     }
     
     var body: some View {
         
         HStack(alignment: .top, spacing: spacing) {
-            ForEach(ccolumns) { column in
+            ForEach(columnss) { column in
                 LazyVStack(spacing: spacing) {
                     ForEach(column.gridItems) { gridItem in
                         getItemView(gridItem: gridItem)
@@ -71,13 +71,16 @@ struct PinterestGrid: View {
     
     func getItemView(gridItem: GridItem) -> some View {
         ZStack {
-            GeometryReader { _ in
+            GeometryReader { reader in
                 Image(gridItem.imageString)
                     .resizable()
+                    .scaledToFill()
+                    .frame(width: reader.size.width, height: reader.size.height, alignment: .center)
             }
         }
         .frame(height: gridItem.height)
         .frame(maxWidth: .infinity)
+        return clipShape(RoundedRectangle(cornerRadius: 15))
     }
 }
 
