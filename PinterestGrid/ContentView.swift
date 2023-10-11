@@ -68,7 +68,7 @@ struct ContentView: View {
                 .foregroundStyle(.black)
                 .background(Color.black.opacity(0.1))
                 .cornerRadius(10)
-
+            
         }
         .disabled(columns == 1)
         .preferredColorScheme(.light)

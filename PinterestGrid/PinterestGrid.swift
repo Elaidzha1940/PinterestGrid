@@ -20,7 +20,6 @@ struct PinterestGrid: View {
         let id = UUID()
         var gridItems = [GridItem]()
     }
- 
     
     let columnss: [Column]
     
