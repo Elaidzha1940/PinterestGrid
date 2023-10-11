@@ -49,7 +49,11 @@ struct ContentView: View {
             columns -= 1
         }){
             Text("Remove")
-
+                .padding(5)
+                .font(.system(size: 18, weight: .bold, design: .rounded))
+                .foregroundStyle(.black)
+                .background(Color.black.opacity(0.1))
+                .cornerRadius(10)
         }
         .disabled(columns == 1)
     }
@@ -59,6 +63,11 @@ struct ContentView: View {
             columns += 1
         }){
             Text("Add")
+                .padding(5)
+                .font(.system(size: 18, weight: .bold, design: .rounded))
+                .foregroundStyle(.black)
+                .background(Color.black.opacity(0.1))
+                .cornerRadius(10)
 
         }
         .disabled(columns == 1)
